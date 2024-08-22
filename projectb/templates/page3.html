@@ -1,0 +1,76 @@
+{% extends 'page1.html' %}
+{% block content %}
+{% load static %}
+<style>
+    body {
+        background-image: url('{% static "images/bg.jpg" %}');
+        background-repeat: no-repeat;
+        background-size: 100% 100vh;
+    }
+
+    .trusted-by {
+        margin-top: 40px;
+        background-color: #021b4d;
+        padding: 20px;
+        color: aliceblue;
+
+    }
+
+    .trusted-by img {
+        width: 60px;
+        height: 60px;
+
+    }
+
+    @media (max-width: 576px) {
+        .trusted-by img {
+            max-width: 50px;
+            margin: 5px;
+        }
+    }
+    .cta-button {
+            background-color: white;
+            color: #0044cc;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+</style>
+
+<body>
+    
+
+    <div class="container-fluid">
+
+
+        <div class="row" style="justify-content: space-between;">
+            <div class="col-md-6">
+                <img class="img-fluid" style="height: 600px;width: 800px;" src='{% static "images/iot1.jpg" %}' alt="">
+            </div>
+            <div class="col-md-6">
+                <img class="img-fluid" style="height: 600px;width: 800px;" src='{% static "images/iot2.jpg" %}' alt="">
+            </div>
+        </div>
+
+        <!-- <div >
+            <h1>30,000 websites get hacked every single day. Are you next?</h1>
+            <p>Secure your website from malware and hackers using Astra before it is too late.</p>
+            <a href="#" class="cta-button">Secure your website in 3 mins</a>
+        </div> -->
+        <div class="trusted-by text-center">
+            <p>Built by the team that has helped secure:</p>
+            <img src='{% static "images/Microsoft-logo-APT29-final.png" %}' alt="Microsoft">
+            <img src='{% static "images/adobe.png" alt="Adobe" %}'>
+            <img src='{% static "images/yuki.jpg" alt="Yuki" %}'>
+            <img src='{% static "images/buffer-logo.jpg" alt="Buffer" %}'>
+            <img src='{% static "images/akit_software.png" alt="Akit" %}'>
+            <img src='{% static "images/slacj.jpg" alt="Muccleberry" %}'>
+        </div>
+    </div>
+</body>
+
+</html>
+{% endblock %}

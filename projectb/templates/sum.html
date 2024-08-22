@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <form action="{% url 'anssum' %}" method="post">
+        {% csrf_token %}
+        <label for="num1">First Number:</label><br> 
+        <input type="number" id="number1" name="num1"><br>
+        <label for="num2">Second Number:</label><br>
+        <input type="number" id="number2" name="num2"><br><br>
+        <input type="submit" value="Sum"><br><br>
+
+        <input type="text" value="{{result}}">
+    </form>
+</body>
+</html>
